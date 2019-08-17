@@ -1,12 +1,4 @@
-$shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-$shadow_hover: 0 7px 2px 0 rgba(0, 0, 0, 0.14), 0 7px 5px 0 rgba(0, 0, 0, 0.12),
-    0 7px 1px -2px rgba(0, 0, 0, 0.2);
-$WET_ASPHALT: #2c3e50;
-$MIDNIGHT_BLUE: #34495e;
-$white: #fff;
-$CONCRETE: #bdc3c7;
-$CLOUD: #ecf0f1;
+@import "./variables.scss";
 
 body {
     margin: 0;
@@ -102,7 +94,7 @@ h2 {
     box-shadow: $shadow;
     border-radius: 5px;
     color: #000;
-	background: #ecf0f1;
+    background: #ecf0f1;
 }
 
 .box-blue {
@@ -139,7 +131,7 @@ h2 {
     background: $white;
     text-align: center;
     cursor: pointer;
-	max-width: 500px;
+    max-width: 500px;
 
     &:hover {
         box-shadow: $shadow_hover;
@@ -223,12 +215,11 @@ h2 {
 }
 
 .description-langage {
-	display: block;
+    display: block;
     text-align: start;
     padding: 5px;
-	overflow: hidden;
-	width: 100%;
-	white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 .contact {

@@ -3,7 +3,7 @@ import Dashboard from "./components/dashboard";
 import "./app.scss";
 
 function App() {
-  return <Dashboard />;
+    return <Dashboard />;
 }
 
 export default App;

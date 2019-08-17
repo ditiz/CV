@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.scss";
 
 const Canvas = {
     width: "100%"
@@ -13,18 +14,24 @@ const experiences = [
     {
         name: "Formation au Campus Numérique in the Alps\nAlternance à Spartoo",
         link: "https://digital-grenoble.com/campus-numerique-in-the-alps/",
-        yearStart: "2016",
-        yearEnd: "2018"
+        start: "2016",
+        end: "2018"
     },
     {
-        name: "Développeur web à Spartoo",
+        name: "Développeur web chez Spartoo",
         link: "https://spartoo.com",
-        yearStart: "2018",
-        yearEnd: "Aujourd'hui"
+        start: "2018",
+        end: "2019"
+    },
+    {
+        name: "Développeur web chez Nexus/Optim",
+        link: "https://fr-fr.nexus-ag.de/home",
+        start: "2019",
+        end: "Aujourd'hui"
     }
 ];
 
-class Experience extends React.Component {
+class Experience2 extends React.Component {
     componentDidMount() {
         let canvas = document.getElementById("myCanvas");
         let ctx = canvas.getContext("2d");
@@ -98,5 +105,31 @@ class Experience extends React.Component {
         );
     }
 }
+
+const Experience = () => {
+    return (
+        <div className="experience">
+            {experiences.map(exp => (
+                <div className="experience_bar">
+                    <div className="experience_bar_element">
+                        <span />
+                    </div>
+                    <div className="experience_list-item">
+                        <span className="experience_list-item_date">
+                            {exp.start} - {exp.end}
+                        </span>
+                        <span className="experience_list-item_name">
+                            {exp.name}
+                        </span>
+                    </div>
+                </div>
+            ))}
+            <div className="experience_bar">
+                <div className="element_bar-last" />
+                <div/>
+            </div>
+        </div>
+    );
+};
 
 export default Experience;

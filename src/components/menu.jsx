@@ -37,6 +37,16 @@ class Menu extends React.Component {
                             </NavLink>
                         </li>
 
+                        <li>
+                            <NavLink
+                                to="/Projects"
+                                id="Projects"
+                                className="link"
+                            >
+                                Projets
+                            </NavLink>
+                        </li>
+
                         {/* <li>
 							<NavLink to='/Hobbies' id="Hobbies" className="link">Hobbies</NavLink>
 						</li> */}
