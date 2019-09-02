@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 
 const Canvas = {
@@ -110,23 +110,48 @@ const Experience = () => {
     return (
         <div className="experience">
             {experiences.map(exp => (
-                <div className="experience_bar">
-                    <div className="experience_bar_element">
-                        <span />
-                    </div>
-                    <div className="experience_list-item">
-                        <span className="experience_list-item_date">
-                            {exp.start} - {exp.end}
-                        </span>
-                        <span className="experience_list-item_name">
-                            {exp.name}
-                        </span>
-                    </div>
-                </div>
+                <ExperienceElement experience={exp} key={exp.name} />
             ))}
             <div className="experience_bar">
                 <div className="element_bar-last" />
-                <div/>
+                <div />
+            </div>
+        </div>
+    );
+};
+
+const ExperienceElement = ({ experience }) => {
+    const [className, setClassName] = useState("experience_bar_element");
+    const enterHandle = () => {
+        setClassName("experience_bar_element experience_bar_element_hover");
+    };
+
+    const leaveHandle = () => {
+        setClassName("experience_bar_element");
+    };
+
+    return (
+        <div className="experience_bar">
+            <div className={className}>
+                <span>
+                    <span />
+                </span>
+            </div>
+            <div
+                className="experience_list-item"
+                onMouseEnter={enterHandle}
+                onMouseLeave={leaveHandle}
+            >
+                <div>
+                    <div className="experience_list-item_date">
+                        <span>
+                            {experience.start} - {experience.end}
+                        </span>
+                    </div>
+                    <div className="experience_list-item_name">
+                        <span>{experience.name}</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

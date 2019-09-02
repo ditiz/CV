@@ -1,0 +1,153 @@
+@import "../../variables.scss";
+
+.group-language {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.language {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    padding: 10px;
+    box-shadow: $shadow;
+    margin: 10px;
+    background: $white;
+    text-align: center;
+    cursor: pointer;
+    width: 8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.language-show {
+    box-shadow: $shadow_hover;
+    width: 25rem;
+}
+
+.image-language-box {
+    width: 10rem;
+}
+
+.image-language {
+    height: 6rem;
+}
+
+.description-language {
+    display: block;
+    text-align: start;
+    padding: 0.25rem;
+    position: absolute;
+    left: 10rem;
+    width: 15rem;
+}
+
+.frontend {
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+
+    h4 {
+        display: none;
+    }
+
+    .HTML {
+        background: #e74c3c;
+        color: #c0392b;
+    }
+
+    .css {
+        background: #2ecc71;
+        color: #27ae60;
+    }
+
+    .javascript {
+        background: #f1c40f;
+        color: #f39c12;
+    }
+}
+
+#abilities h3 {
+    text-align: center;
+    padding-top: 10px;
+    color: #000;
+    font-size: 22px;
+}
+
+.front-language {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    justify-content: center;
+}
+
+.backend {
+    background: #3498db;
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+    color: #2980b9;
+}
+
+.bdd {
+    background: #2ecc71;
+    color: #27ae60;
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.markup {
+    background: #9b59b6;
+    color: #8e44ad;
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.versionning {
+    background: #1abc9c;
+    color: #16a085;
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.language-width {
+    width: 15rem;
+
+    .image-language-box {
+        width: 15rem;
+    }
+
+    .description-language {
+        left: 16rem;
+    }
+
+    &.language-show {
+        width: 32rem;
+    }
+}
+
+.language-extra-width {
+    $size: 25rem;
+    width: $size;
+
+    .image-language-box {
+        width: $size;
+    }
+
+    .description-language {
+        left: 26rem;
+    }
+
+    &.language-show {
+        width: 40rem;
+    }
+}

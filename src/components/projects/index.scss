@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.projects {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.project {
+    width: 80%;
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    background: $BLUE;
+    color: $text-alt;
+    box-shadow: $shadow;
+    display: flex;
+    justify-content: flex-start;
+
+    span {
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+
+    .project-infos {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .project-image {
+        img {
+            height: 5rem;
+            border: 1px solid transparent;
+            transition: 0.2s all;
+            margin-right: 2rem;
+
+            &:hover {
+                border: 1px solid $WET_ASPHALT;
+            }
+        }
+    }
+}
