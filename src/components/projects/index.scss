@@ -40,3 +40,69 @@
         }
     }
 }
+
+.github {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    background: $TEAL;
+    color: $text-alt;
+    box-shadow: $shadow;
+
+    span {
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+
+    .img {
+        margin-right: 2rem;
+        border: 1px solid transparent;
+        transition: 0.2s all;
+
+        &:hover {
+            border: 1px solid $WET_ASPHALT;
+        }
+
+        img {
+            height: 5rem;
+        }
+    }
+
+    .infos {
+        text-align: start;
+
+        a {
+            position: relative;
+            z-index: 2;
+
+            &:hover::before {
+                content: "";
+                position: absolute;
+                bottom: -0.1rem;
+                background: $WET_ASPHALT;
+                height: 0.5rem;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.8;
+                animation: 0.2s sliding ease;
+            }
+        }
+    }
+
+    .presentation {
+        width: 100%;
+    }
+}
+
+@keyframes sliding {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

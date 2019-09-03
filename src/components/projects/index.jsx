@@ -16,9 +16,26 @@ const projects = [
     }
 ];
 
+const githubLink = "https://github.com/ditiz";
+
 const Projects = () => {
     return (
         <div className="projects">
+            <div className="github">
+                <div className="img">
+                    <a href={githubLink} target="_blank">
+                        <img src="./img/projects/github.png" alt="github_img" />
+                    </a>
+                </div>
+                <div className="infos">
+                    <div className="presentation">Lien vers mon Github</div>
+                    <div className="detail">
+                        <span>Lien:</span>
+                        <a href={githubLink} target="_blank">{githubLink}</a>
+                    </div>
+                </div>
+            </div>
+
             {projects.map(p => (
                 <div className="project">
                     <div className="project-image">
