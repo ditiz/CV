@@ -10,7 +10,6 @@ class Contact extends React.Component {
 	}
 
 	componentDidMount () {
-
 		//img
 		let imgMail = document.createElement("img");
 		imgMail.setAttribute('src', 'https://cdn3.iconfinder.com/data/icons/business-8/512/E-mail_open-512.png');

@@ -1,0 +1,69 @@
+@import "../../variables.scss";
+
+.navbar {
+    color: #fff;
+    border-radius: 0;
+    background: $WET_ASPHALT;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.nav-items {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    * {
+        margin: auto;
+        align-self: auto;
+    }
+}
+
+.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-device-width: $phone_width) {
+    .menu-icon {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+
+        img {
+            height: 3rem;
+            filter: invert(100%);
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+    }
+
+    .nav-items {
+        display: none;
+        flex-flow: column;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+
+        li {
+            width: 100%;
+            padding: 1rem 0;
+        }
+    }
+}

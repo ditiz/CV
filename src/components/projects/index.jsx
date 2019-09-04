@@ -23,7 +23,11 @@ const Projects = () => {
         <div className="projects">
             <div className="github">
                 <div className="img">
-                    <a href={githubLink} target="_blank">
+                    <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <img src="./img/projects/github.png" alt="github_img" />
                     </a>
                 </div>
@@ -31,13 +35,19 @@ const Projects = () => {
                     <div className="presentation">Lien vers mon Github</div>
                     <div className="detail">
                         <span>Lien:</span>
-                        <a href={githubLink} target="_blank">{githubLink}</a>
+                        <a
+                            href={githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {githubLink}
+                        </a>
                     </div>
                 </div>
             </div>
 
             {projects.map(p => (
-                <div className="project">
+                <div className="project" key={p.name}>
                     <div className="project-image">
                         <a
                             href={p.link}
