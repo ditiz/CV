@@ -39,7 +39,7 @@ const Menu = () => {
                             id="Abilities"
                             className="link"
                         >
-                            Capacité
+                            Capacités
                         </NavLink>
                     </li>
 
@@ -49,7 +49,7 @@ const Menu = () => {
                             id="Experience"
                             className="link"
                         >
-                            Expérience
+                            Expériences
                         </NavLink>
                     </li>
 

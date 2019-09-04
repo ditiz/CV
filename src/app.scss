@@ -82,27 +82,3 @@ h2 {
     width: 75%;
     margin: auto;
 }
-
-.contact {
-    margin: auto;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-
-    div {
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-        margin: 10px auto;
-    }
-
-    p {
-        text-align: center;
-        width: 70%;
-        line-height: 70px;
-    }
-
-    img {
-        width: 100px;
-    }
-}
