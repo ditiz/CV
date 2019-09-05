@@ -54,6 +54,16 @@ const Menu = () => {
                     </li>
 
                     <li>
+                        <NavLink
+                            to={"/Formation"}
+                            id="Formation"
+                            className="link"
+                        >
+                            Formations
+                        </NavLink>
+                    </li>
+
+                    <li>
                         <NavLink to="/Projects" id="Projects" className="link">
                             Projets
                         </NavLink>
