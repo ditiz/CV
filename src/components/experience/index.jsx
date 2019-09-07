@@ -4,7 +4,7 @@ import "./index.scss";
 
 export const experiences = [
     {
-        name: "Formation au Campus Numérique in the Alps\nAlternance à Spartoo",
+        name: "Alternance à Spartoo",
         link: "https://digital-grenoble.com/campus-numerique-in-the-alps/",
         start: "2016",
         end: "2018"
@@ -30,7 +30,9 @@ const Experience = () => {
                 <ExperienceElement experience={exp} key={exp.name} />
             ))}
             <div className="experience_bar">
-                <div className="element_bar-last" />
+                <div className="experience_bar_element-wrapper">
+                    <div className="element_bar-last" />
+                </div>
                 <div />
             </div>
         </div>

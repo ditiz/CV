@@ -12,10 +12,12 @@ const ExperienceElement = ({ experience }) => {
 
     return (
         <div className="experience_bar">
-            <div className={className}>
-                <span>
-                    <span />
-                </span>
+            <div className="experience_bar_element-wrapper">
+                <div className={className}>
+                    <span>
+                        <span />
+                    </span>
+                </div>
             </div>
             <div
                 className="experience_list-item"

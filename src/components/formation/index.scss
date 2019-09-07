@@ -67,7 +67,7 @@
     left: -1rem;
     width: 3rem;
     height: 3rem;
-    border: 1rem solid $RED;
+    border: 1rem solid $GREEN;
     z-index: 2;
     background: none;
     border-radius: 50%;
@@ -88,11 +88,11 @@
         text-align: center;
         height: 5rem;
         width: 50vw;
-
         position: absolute;
         top: 7rem;
-        left: O;
-
+        right: 0;
+        left: 0;
+        margin: auto;
         z-index: 10;
         transition: all 0.2s;
         border: 1px solid transparent;
@@ -106,7 +106,7 @@
 }
 
 .formation_bar_element_hover > span > span {
-    border-color: $ORANGE;
+    border-color: $LIME;
     left: 0;
 }
 

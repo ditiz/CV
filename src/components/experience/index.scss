@@ -9,8 +9,13 @@
 .experience_bar {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
-    justify-items: center;
     align-items: center;
+    justify-self: center;
+}
+
+.experience_bar_element-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .experience_bar_element {
@@ -79,6 +84,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
     position: relative;
 
     & > div {
@@ -86,10 +92,12 @@
         grid-template-columns: 5fr 5fr;
         text-align: center;
         height: 5rem;
-        width: 30rem;
+        width: 50vw;
         position: absolute;
         top: 7rem;
-        right: 10%;
+        right: 0;
+        left: 0;
+        margin: auto;
         z-index: 10;
         transition: all 0.2s;
         border: 1px solid transparent;
