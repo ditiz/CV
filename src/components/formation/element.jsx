@@ -26,7 +26,7 @@ const Element = ({ formation }) => {
                 <div>
                     <div className="formation_list-item_date">
                         <span>
-                            {formation.start} - {formation.end}
+                            {formation.yearStart} - {formation.yearEnd}
                         </span>
                     </div>
                     <div className="formation_list-item_name">

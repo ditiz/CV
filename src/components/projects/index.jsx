@@ -6,12 +6,14 @@ const projects = [
         name: "traduction-musik",
         description: `Site aider l'utilisateur a traduit des paroles par musiques.`,
         link: "https://traduction-musik.projets.mathieu.smarzyk.com/",
+        github: "https://github.com/ditiz/trad-musik",
         img: "./img/projects/trad-musik.png"
     },
     {
         name: "dev-log",
         description: `Site permettant de gérer ses snippets de code.`,
         link: "https://dev-log.projets.mathieu.smarzyk.com/",
+        github: "https://github.com/ditiz/dev-log",
         img: "./img/projects/dev-log.png"
     }
 ];
@@ -66,6 +68,30 @@ const Projects = () => {
                             <span>Description:</span>
                             {p.description}
                         </div>
+                        {p.link && (
+                            <div className="project-link">
+                                <span>Lien:</span>
+                                <a
+                                    href={p.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {p.link}
+                                </a>
+                            </div>
+                        )}
+                        {p.github && (
+                            <div className="project-link">
+                                <span>Github</span>
+                                <a
+                                    href={p.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {p.github}
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
             ))}

@@ -1,5 +1,6 @@
 import React from "react";
 import Element from "./element";
+import "./index.scss";
 
 const formations = [
     {
@@ -22,11 +23,11 @@ const formations = [
 const Formations = () => {
     return (
         <div className="formations">
-            {formations.map(exp => (
-                <Element formations={exp} key={exp.name} />
+            {formations.map(formation => (
+                <Element formation={formation} key={formation.name} />
             ))}
-            <div className="formations_bar">
-                <div className="element_bar-last" />
+            <div className="formation_bar">
+                <div className="formation-element_bar-last" />
                 <div />
             </div>
         </div>

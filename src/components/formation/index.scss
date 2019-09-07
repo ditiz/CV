@@ -1,0 +1,149 @@
+@import "../../variables.scss";
+
+.formation {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.formation_bar {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.formation_bar_element {
+    background: $MIDNIGHT_BLUE;
+    border-left: 0.25rem solid $WET_ASPHALT;
+    border-right: 0.25rem solid $WET_ASPHALT;
+    margin: auto;
+    width: 1rem;
+    height: 10rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        left: 2rem;
+        background: $MIDNIGHT_BLUE;
+        border-left: 0.25rem solid $WET_ASPHALT;
+        border-right: 0.25rem solid $WET_ASPHALT;
+        width: 1rem;
+        height: 5rem;
+        transform: rotate(125deg);
+        z-index: -1;
+    }
+}
+
+.formation_bar_element > span {
+    position: absolute;
+    top: 7rem;
+    left: 3.75rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 1rem solid $MIDNIGHT_BLUE;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        width: 3rem;
+        height: 3rem;
+        border: 1rem solid $BACKGROUND;
+        z-index: 1;
+        background: none;
+        border-radius: 50%;
+        clip-path: polygon(35% 50%, 100% 100%, 100% 0);
+    }
+}
+
+.formation_bar_element > span > span {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1rem solid $RED;
+    z-index: 2;
+    background: none;
+    border-radius: 50%;
+    clip-path: polygon(35% 50%, 100% 95%, 100% 5%);
+    transition: all 1s;
+}
+
+.formation_list-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    & > div {
+        display: grid;
+        grid-template-columns: 5fr 5fr;
+        text-align: center;
+        height: 5rem;
+        width: 50vw;
+
+        position: absolute;
+        top: 7rem;
+        left: O;
+
+        z-index: 10;
+        transition: all 0.2s;
+        border: 1px solid transparent;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.formation_bar_element_hover > span > span {
+    border-color: $ORANGE;
+    left: 0;
+}
+
+.formation_list-item > div:hover {
+    box-shadow: $shadow;
+    border: 1px solid $WET_ASPHALT;
+}
+
+.formation-element_bar-last {
+    background: $MIDNIGHT_BLUE;
+    border-left: 0.25rem solid $WET_ASPHALT;
+    border-right: 0.25rem solid $WET_ASPHALT;
+    margin: 0;
+    width: 1rem;
+    height: 8rem;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 5rem;
+        border-left: 0.25rem solid $WET_ASPHALT;
+        border-right: 0.25rem solid $WET_ASPHALT;
+        background: $MIDNIGHT_BLUE;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        top: 5rem;
+        left: 1rem;
+    }
+
+    &::after {
+        transform: rotate(135deg);
+        top: 5rem;
+        left: -1.5rem;
+    }
+}

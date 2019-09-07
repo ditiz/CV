@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
                             <Route path="/Abilities" component={Abilities} />
                             <Route path="/Projects" component={Projects} />
                             <Route path="/Experience" component={Experience} />
-                            <Route path="Formation" component={Formation} />
+                            <Route path="/Formation" component={Formation} />
                             <Route path="/Hobbies" />
                             <Route path="/Contact" component={Contact} />
                         </Switch>

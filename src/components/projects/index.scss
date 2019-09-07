@@ -5,10 +5,10 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
+    height: 80vh;
 }
 .project {
     width: 80%;
-    margin-top: 5rem;
     padding: 1rem 3rem;
     border-radius: 0.25rem;
     background: $BLUE;
@@ -25,9 +25,16 @@
     .project-infos {
         display: flex;
         flex-flow: column;
+
+        & > * {
+            margin: 0.2rem 0;
+        }
     }
 
     .project-image {
+        display: flex;
+        align-items: center;
+
         img {
             height: 5rem;
             border: 1px solid transparent;
@@ -45,7 +52,6 @@
     display: flex;
     justify-content: flex-start;
     width: 80%;
-    margin-top: 5rem;
     padding: 1rem 3rem;
     border-radius: 0.25rem;
     background: $TEAL;
@@ -70,30 +76,30 @@
             height: 5rem;
         }
     }
-
-    .infos {
-        text-align: start;
-
-        a {
-            position: relative;
-            z-index: 2;
-
-            &:hover::before {
-                content: "";
-                position: absolute;
-                bottom: -0.1rem;
-                background: $WET_ASPHALT;
-                height: 0.5rem;
-                width: 100%;
-                z-index: -1;
-                opacity: 0.8;
-                animation: 0.2s sliding ease;
-            }
-        }
-    }
-
     .presentation {
         width: 100%;
+    }
+}
+
+.infos,
+.project-link {
+    text-align: start;
+
+    a {
+        position: relative;
+        z-index: 2;
+
+        &:hover::before {
+            content: "";
+            position: absolute;
+            bottom: -0.1rem;
+            background: $WET_ASPHALT;
+            height: 0.5rem;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+            animation: 0.2s sliding ease;
+        }
     }
 }
 
