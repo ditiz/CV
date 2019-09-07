@@ -100,7 +100,8 @@
         margin: auto;
         z-index: 10;
         transition: all 0.2s;
-        border: 1px solid transparent;
+        background: #fff;
+        border-radius: 0.25rem;
 
         & > div {
             display: flex;
@@ -116,8 +117,9 @@
 }
 
 .experience_list-item > div:hover {
+    background: $ORANGE;
+    color: #fff;
     box-shadow: $shadow;
-    border: 1px solid $WET_ASPHALT;
 }
 
 .element_bar-last {

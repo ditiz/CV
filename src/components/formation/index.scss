@@ -95,7 +95,8 @@
         margin: auto;
         z-index: 10;
         transition: all 0.2s;
-        border: 1px solid transparent;
+        background: #fff;
+        border-radius: 0.25rem;
 
         & > div {
             display: flex;
@@ -112,7 +113,8 @@
 
 .formation_list-item > div:hover {
     box-shadow: $shadow;
-    border: 1px solid $WET_ASPHALT;
+    background: $GREEN;
+    color: #FFF;
 }
 
 .formation-element_bar-last {
