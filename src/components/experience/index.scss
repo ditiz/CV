@@ -154,3 +154,46 @@
         left: -1.5rem;
     }
 }
+
+@media screen and (max-device-width: $phone_width) {
+    .experience_bar_element-wrapper {
+        justify-content: start;
+
+        .experience_bar_element {
+            margin: 0;
+
+            &::before {
+                top: 4.4rem;
+                left: 0;
+                width: 0.25rem;
+                transform: rotate(125deg);
+            }
+
+            & > span {
+                border-width: 0.5rem;
+                left: 2rem;
+                height: 2rem;
+                width: 2rem;
+
+                &::before,
+                & > span {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                & > span {
+                    border-width: 0.5rem;
+                    top: -0.5rem;
+                    left: -0.5rem;
+                }
+            }
+        }
+    }
+
+    .experience_list-item {
+        & > div {
+            top: 6rem;
+            width: auto;
+        }
+    }
+}
