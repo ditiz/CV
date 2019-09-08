@@ -5,7 +5,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
-    height: 80vh;
+    min-height: 80vh;
 }
 .project {
     width: 80%;
@@ -87,7 +87,7 @@
 
     a {
         position: relative;
-        z-index: 2;
+        z-index: 2; 
 
         &:hover::before {
             content: "";
@@ -110,5 +110,44 @@
 
     100% {
         width: 100%;
+    }
+}
+
+@media screen and (max-device-width: $phone_width) {
+    .projects {
+        display: grid;
+        grid-row-gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .github, .project {
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        justify-self: center;
+
+        .project-infos > * {
+            display: flex;
+            flex-flow: column;
+            overflow-wrap: break-word;
+        }
+    }
+
+    .project-image {
+        justify-content: center; 
+        margin-bottom: 1rem;
+
+        img {
+            margin-right: 0 !important;
+        }
+    }
+
+    .github .img {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 }
