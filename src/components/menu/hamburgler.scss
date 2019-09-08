@@ -1,0 +1,70 @@
+// Colors
+$light: #fff;
+$dark: #000;
+$radius: 50px;
+
+body {
+    text-align: center;
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    & > * {
+        margin: auto;
+    }
+}
+
+.hamburgler {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem 0;
+    display: block;
+    transition: 0.3s ease all;
+
+    &.no-hamburgler {
+        transform: rotate(-45deg);
+    }
+}
+
+.bun,
+.meat {
+    display: block;
+    background: $light;
+    height: 20%;
+    width: 100%;
+    transition: 0.3s ease all;
+    border-radius: $radius;
+
+    .no-hamburgler {
+        background: Blue;
+    }
+}
+
+.top {
+    .no-hamburgler & {
+        height: 38%;
+        width: 20%;
+        margin-left: 40%;
+        border-radius: $radius $radius 0 0;
+    }
+}
+
+.bottom {
+    .no-hamburgler & {
+        height: 38%;
+        width: 20%;
+        margin-left: 40%;
+        border-radius: 0 0 $radius $radius;
+    }
+}
+
+.meat {
+    margin: 20% 0;
+
+    .no-hamburgler & {
+        margin: 2% 0;
+    }
+}

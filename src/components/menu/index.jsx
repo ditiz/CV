@@ -1,19 +1,22 @@
 import React, { createRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
+import "./hamburgler.scss";
 
 const Menu = () => {
     let showMenu = false;
     const ref = createRef(null);
+    const refIcon = createRef(null);
 
     const handleOnClick = () => {
+        showMenu = !showMenu;
         if (showMenu) {
             ref.current.style.display = "flex";
+            refIcon.current.classList.add("no-hamburgler");
         } else {
             ref.current.style.display = "none";
+            refIcon.current.classList.remove("no-hamburgler");
         }
-
-        showMenu = !showMenu;
     };
 
     return (
@@ -24,7 +27,11 @@ const Menu = () => {
                 id="navbar"
             >
                 <div className="menu-icon" onClick={handleOnClick}>
-                    <img src="./img/menu/Hamburger_icon.png" alt="menu_icon" />
+                    <span className="hamburgler" ref={refIcon}>
+                        <div className="bun top"></div>
+                        <div className="meat"></div>
+                        <div className="bun bottom"></div>
+                    </span>
                 </div>
                 <ul className="nav navbar-nav mr-auto nav-items" ref={ref}>
                     <li>
