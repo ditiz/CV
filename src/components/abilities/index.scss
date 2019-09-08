@@ -151,3 +151,20 @@
         width: 40rem;
     }
 }
+
+@media screen and (max-device-width: $phone_width) {
+    .language-show {
+        height: 10rem;
+        width: 15rem;
+
+        .image-language-box {
+            display: none;
+        }
+
+        .description-language {
+            left: 0;
+            width: 15rem;
+            text-align: center;
+        }
+    }
+}
