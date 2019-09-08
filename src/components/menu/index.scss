@@ -66,4 +66,18 @@
             padding: 1rem 0;
         }
     }
+
+    .show-menu {
+        display: flex;
+        display: flex;
+        position: absolute;
+        height: 85vh;
+        background: $WET_ASPHALT;
+        top: 2.5rem;
+        z-index: 1000;
+    }
+    
+    .hide-menu {
+        display: none;
+    }
 }

@@ -1,22 +1,22 @@
-import React, { createRef } from "react";
+import React, { useState, createRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
 import "./hamburgler.scss";
 
 const Menu = () => {
-    let showMenu = false;
-    const ref = createRef(null);
-    const refIcon = createRef(null);
+    let [hideMenu, setHideMenu] = useState(true);
+    let [menuClass, setMenuClass] = useState("");
+    let [iconClass, setIconClass] = useState("hamburgler");
 
     const handleOnClick = () => {
-        showMenu = !showMenu;
-        if (showMenu) {
-            ref.current.style.display = "flex";
-            refIcon.current.classList.add("no-hamburgler");
+        if (hideMenu) {
+            setMenuClass("show-menu");
+            setIconClass("hamburgler no-hamburgler");
         } else {
-            ref.current.style.display = "none";
-            refIcon.current.classList.remove("no-hamburgler");
+            setMenuClass("hide-menu");
+            setIconClass("hamburgler");
         }
+        setHideMenu(s => !s);
     };
 
     return (
@@ -27,64 +27,72 @@ const Menu = () => {
                 id="navbar"
             >
                 <div className="menu-icon" onClick={handleOnClick}>
-                    <span className="hamburgler" ref={refIcon}>
+                    <span className={iconClass}>
                         <div className="bun top"></div>
                         <div className="meat"></div>
                         <div className="bun bottom"></div>
                     </span>
                 </div>
-                <ul className="nav navbar-nav mr-auto nav-items" ref={ref}>
+                <ul className={`nav navbar-nav mr-auto nav-items ${menuClass}`}>
                     <li>
-                        <NavLink to={"/Home"} id="Home" className="link">
-                            Accueil
-                        </NavLink>
+                        <LinkMenu
+                            to="Home"
+                            name="Accueil"
+                            click={handleOnClick}
+                        />
                     </li>
 
                     <li>
-                        <NavLink
-                            to={"/Abilities"}
-                            id="Abilities"
-                            className="link"
-                        >
-                            Capacités
-                        </NavLink>
+                        <LinkMenu
+                            to="Abilities"
+                            name="Capacités"
+                            click={handleOnClick}
+                        />
                     </li>
 
                     <li>
-                        <NavLink
-                            to={"/Experience"}
-                            id="Experience"
-                            className="link"
-                        >
-                            Expériences
-                        </NavLink>
+                        <LinkMenu
+                            to="Experience"
+                            name="Experience"
+                            click={handleOnClick}
+                        />
                     </li>
 
                     <li>
-                        <NavLink
-                            to={"/Formation"}
-                            id="Formation"
-                            className="link"
-                        >
-                            Formations
-                        </NavLink>
+                        <LinkMenu
+                            to="Formation"
+                            name="Formation"
+                            click={handleOnClick}
+                        />
                     </li>
 
                     <li>
-                        <NavLink to="/Projects" id="Projects" className="link">
-                            Projets
-                        </NavLink>
+                        <LinkMenu
+                            to="Projects"
+                            name="Projets"
+                            click={handleOnClick}
+                        />
                     </li>
 
                     <li>
-                        <NavLink to="/Contact" id="Contact" className="link">
-                            Contact
-                        </NavLink>
+                        <LinkMenu
+                            to="Contact"
+                            name="Contact"
+                            click={handleOnClick}
+                        />
                     </li>
                 </ul>
             </nav>
         </div>
     );
 };
+
+const LinkMenu = ({ to, name, click }) => (
+    <div onClick={click}>
+        <NavLink to={`/${to}`} id={to} className="link">
+            {name}
+        </NavLink>
+    </div>
+);
 
 export default Menu;

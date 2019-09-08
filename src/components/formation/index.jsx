@@ -27,7 +27,9 @@ const Formations = () => {
                 <Element formation={formation} key={formation.name} />
             ))}
             <div className="formation_bar">
-                <div className="formation-element_bar-last" />
+                <div className="formation_bar_element-wrapper">
+                    <div className="formation-element_bar-last" />
+                </div>
                 <div />
             </div>
         </div>
