@@ -9,7 +9,7 @@ const abilities_list = {
 			{
 				name: "JQuery",
 				description: "JQuery est le framework qui a permis de révolutionner le Javascript et qui a permis de montrer le potentiel incroyable de ce langage",
-				image: "./img/languages/jQuery.gif"
+				image: "./img/languages/jQuery.png"
 			}, {
 				name: "Angular",
 				description: "Framework Javascript créer par Google, il est assez lourd mais permet de comportimenter avec beacoup d'effecacité les éléments des applications",
@@ -92,7 +92,6 @@ const abilities_list = {
 			name: "MongoDB",
 			description: "Base de données de type document appartenent au NoSQL, il utilise une sectrure JSON pour stocker des informations",
 			image: "./img/languages/mongodb.png",
-			display: "extra-large-width"
 		}
 	],
 	"other": {

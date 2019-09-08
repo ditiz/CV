@@ -14,7 +14,7 @@ class Contact extends React.Component {
         let imgMail = document.createElement("img");
         imgMail.setAttribute(
             "src",
-            "https://cdn3.iconfinder.com/data/icons/business-8/512/E-mail_open-512.png"
+            "./img/contact/mail.png"
         );
         this.mail.current.appendChild(imgMail);
 
@@ -22,7 +22,7 @@ class Contact extends React.Component {
         let imgPhone = document.createElement("img");
         imgPhone.setAttribute(
             "src",
-            "https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/phone-call-active-512.png"
+            "./img/contact/phone.png"
         );
         this.phone.current.appendChild(imgPhone);
     }
