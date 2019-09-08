@@ -87,3 +87,9 @@ h2 {
     width: 75%;
     margin: auto;
 }
+
+@media screen and (max-device-width: $phone_width) {
+    body {
+        font-size: calc(10px + 2vmin);
+    }
+}

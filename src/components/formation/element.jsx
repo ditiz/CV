@@ -13,10 +13,12 @@ const Element = ({ formation }) => {
 
     return (
         <div className="formation_bar">
-            <div className={className}>
-                <span>
-                    <span />
-                </span>
+            <div className="formation_bar_element-wrapper">
+                <div className={className}>
+                    <span>
+                        <span />
+                    </span>
+                </div>
             </div>
             <div
                 className="formation_list-item"

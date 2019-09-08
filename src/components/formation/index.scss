@@ -9,8 +9,13 @@
 .formation_bar {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
-    justify-items: center;
     align-items: center;
+    justify-self: center;
+}
+
+.formation_bar_element-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .formation_bar_element {
@@ -152,7 +157,6 @@
 
 
 @media screen and (max-device-width: $phone_width) {
-
     .formation_bar {
         grid-template-columns: 0.15fr 1fr;
     }
@@ -194,7 +198,7 @@
         }
     }
 
-    .element_bar-last {
+    .formation-element_bar-last {
         width: 0.25rem;
         height: 5rem;
 
