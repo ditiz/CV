@@ -12,7 +12,7 @@ const trans = (x, y, s) =>
 const MovingCard = ({ children }) => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 200 },
+    config: { mass: 200, tension: 350, friction: 500 },
   }));
 
   return (
